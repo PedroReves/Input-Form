@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--font: "Poppins", sans-serif;
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+	--blue: hsl(248, 32%, 49%);
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	font-family: var(--font);
+	background: url(../images/bg-intro-desktop.png) var(--red);
+	background-size: cover;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	display: flex;
+	gap: 2rem;
+	max-width: 1100px;
+}
+
+.container__left {
+	flex-basis: 50%;
+	align-self: center;
+	text-align: start;
+	color: #fff;
+	gap: 2.125rem;
+}
+
+.container__left-title {
+	text-align: start;
+	font-size: 3.125rem;
+	line-height: 3.4375rem;
+	letter-spacing: -.52px;
+	font-weight: 700;
+}
+
+.container__right {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.container__right-pricing {
+	font-size: .9375rem;
+	font-weight: var(--fw-regular);
+	line-height: 1.625rem;
+	text-align: center;
+	padding: 1.125rem 4.1875rem;
+	color: #fff;
+	background-color: var(--blue);
+	box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+	border-radius: .625rem;
+}
+
+.container__right form {
+	background-color: #fff;
+	display: grid;
+	gap: 1rem;
+	padding: 1.5rem;
+	box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+	border-radius: 10px;
+}
+
+.container__right-paragraph {
+	font-weight: 400;
+	text-align: center;
+	font-size: .6875rem;
+	line-height: 1.3125rem;
+	padding-inline: 18px;
+	color: var(--grayish-blue);
+	margin-top: -.625rem;
+}
+
+.colored-text {
+	font-weight: 700;
+	color: var(--red);
+	cursor: pointer;
+}
+
+.container__input {
+	position: relative;
+}
+
+input {
+	font-weight: 500;
+	font-size: .875rem;
+	color: #3D3B48;
+	letter-spacing: .25px;
+	padding-inline: 19.4px 0;
+	padding-block: 15px;
+	border: 1px solid var(--grayish-blue);
+	border-radius: 5px;
+	width: 100%;
+}
+
+input.error-field {
+	border: 1px solid var(--red);
+	color: var(--red);
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid var(--dark-blue);
+	box-shadow: none;
+}
+
+.icon-error {
+	position: absolute;
+	right: 5%;
+	top: 40%;
+	transform: translateY(-50%);
+	display: none;
+}
+
+.flash-message {
+	font-style: italic;
+	font-size: .6875rem;
+	text-align: end;
+	margin-top: .1rem;
+	margin-right: .25rem;
+	font-weight: 500;
+	color: var(--red);
+}
+
+button {
+	border: none;
+	background-color: var(--green);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: .9375rem;
+	color: #fff;
+	padding: 15px 45px;
+	border-radius: 5px;
+	transition: all 200ms ease;
+}
+
+button:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
+span {
+	font-weight: 700;
+}
+
+form {
+	padding: 2.5rem;
+}
+
+svg,
+img {
+	display: block;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 75em) {
+	body {
+		display: grid;
+		padding-inline: 1.5rem;
+		place-content: center;
+		background: url(../images/bg-intro-mobile.png) var(--red);
+	}
+
+	.container {
+		display: grid;
+		gap: 4rem;
+		max-width: 750px;
+	}
+
+	.container__left {
+		display: grid;
+		gap: 1.625rem;
+		color: #fff;
+		text-align: center;
+	}
+
+	.container__left-title {
+		font-size: 1.75rem;
+		line-height: 2.25rem;
+		text-align: center;
+		letter-spacing: -0.291667px;
+	}
+
+	.container__left-desc {
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.625rem;
+	}
+}
